@@ -9,4 +9,17 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
 
+
+  describe("To String value", () => {
+
+    it("should return 1 as string value when put 1 as number", async(() => {
+      const component = TestBed.createComponent(AppComponent);
+
+      let leftOperand = component.componentInstance.toStringValue(1);
+
+      expect(leftOperand).toEqual("1");
+    }));
+
+  });
+
 });

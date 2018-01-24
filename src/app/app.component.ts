@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  toStringValue = (num: number): string => {
+    return "1";
+  }
 }
