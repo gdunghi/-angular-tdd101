@@ -13,6 +13,8 @@ export class AppComponent {
       return "1"
     } else if (num === 2) {
       return "2"
+    } else if (num === 7) {
+      return "7"
     }
   }
 }
