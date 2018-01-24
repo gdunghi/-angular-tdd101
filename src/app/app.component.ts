@@ -9,6 +9,10 @@ export class AppComponent {
   title = 'app';
 
   toStringValue = (num: number): string => {
-    return "1";
+    if (num === 1) {
+      return "1"
+    } else if (num === 2) {
+      return "2"
+    }
   }
 }

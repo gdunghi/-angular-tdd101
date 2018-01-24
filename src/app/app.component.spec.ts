@@ -20,6 +20,14 @@ describe('AppComponent', () => {
       expect(leftOperand).toEqual("1");
     }));
 
+    it("should return 2 as string value when put 2 as number", async(() => {
+      const component = TestBed.createComponent(AppComponent);
+
+      let leftOperand = component.componentInstance.toStringValue(2);
+
+      expect(leftOperand).toEqual("2");
+    }));
+
   });
 
 });
