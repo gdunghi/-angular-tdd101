@@ -76,6 +76,15 @@ describe('AppComponent', () => {
     });
   });
 
+  describe("Captcha", () => {
+    it("shouod return 1 + one when put 1,1,1,1", () => {
+      const component = TestBed.createComponent(AppComponent);
+      let captcha = component.componentInstance.captcha(1, 1, 1, 1);
+      expect(captcha).toEqual("1+one");
+    });
+
+  });
+
 
   describe("To String value", () => {
 

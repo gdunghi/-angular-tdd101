@@ -42,5 +42,12 @@ export class AppComponent {
     }
     return "";
   }
-  
+
+  captcha = (pattern: number, leftOperand: number, operand: number, rightOperand: number): string => {
+    let left = this.leftOperand(pattern, leftOperand);
+    let right = this.rightOperand(pattern, rightOperand);
+    let operation = this.operand(operand);
+    return left + operation + right;
+  }
+
 }
