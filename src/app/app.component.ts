@@ -7,14 +7,40 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  public FIRST_PATTERN = 1;
 
   toStringValue = (num: number): string => {
-    if (num === 1) {
-      return "1"
-    } else if (num === 2) {
-      return "2"
-    } else if (num === 7) {
-      return "7"
+    return num + "";
+  }
+
+  leftOperand = (pattern: number, num: number): string => {
+    if (pattern === this.FIRST_PATTERN) {
+      return this.toStringValue(num);
+    } else if (pattern === 2) {
+      if (num === 1) {
+        return "one";
+      }
+    }
+    return "";
+  }
+
+  rightOperand = (pattern: number, num: number): string => {
+    if (pattern === 1) {
+      if (num === 1) {
+        return "one";
+      } else if (num === 2) {
+        return "two";
+      }
     }
   }
+
+  operand = (operand: number): string => {
+    if (operand === 1) {
+      return "+";
+    } else if (operand === 2) {
+      return "*";
+    }
+    return "";
+  }
+  
 }
